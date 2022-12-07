@@ -58,28 +58,29 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(280, 532);
             this.listBox2.TabIndex = 2;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // driveB1
             // 
+            this.driveB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.driveB1.FormattingEnabled = true;
             this.driveB1.Location = new System.Drawing.Point(146, 13);
             this.driveB1.Name = "driveB1";
             this.driveB1.Size = new System.Drawing.Size(116, 24);
             this.driveB1.TabIndex = 3;
-            this.driveB1.Text = "Select drive..";
-            this.driveB1.DropDown += new System.EventHandler(this.driveB1_DropDown);
-            this.driveB1.DropDownClosed += new System.EventHandler(this.driveB1_DropDownClosed);
+            this.driveB1.SelectedIndexChanged += new System.EventHandler(this.driveB1_SelectedIndexChanged);
+            this.driveB1.SelectedValueChanged += new System.EventHandler(this.driveB1_SelectedValueChanged);
             // 
             // driveB2
             // 
+            this.driveB2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.driveB2.FormattingEnabled = true;
             this.driveB2.Location = new System.Drawing.Point(559, 12);
             this.driveB2.Name = "driveB2";
             this.driveB2.Size = new System.Drawing.Size(118, 24);
             this.driveB2.TabIndex = 4;
-            this.driveB2.Text = "Select drive..";
-            this.driveB2.DropDown += new System.EventHandler(this.driveB2_DropDown);
-            this.driveB2.DropDownClosed += new System.EventHandler(this.driveB2_DropDownClosed);
+            this.driveB2.SelectedIndexChanged += new System.EventHandler(this.driveB2_SelectedIndexChanged);
+            this.driveB2.SelectedValueChanged += new System.EventHandler(this.driveB2_SelectedValueChanged);
             // 
             // backBtn1
             // 
@@ -165,6 +166,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
