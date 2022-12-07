@@ -20,26 +20,56 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
-        private void driveB1_DropDown(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            func.getDrives(driveB1);
+            func.getSystemDrives(driveB1);
+            func.getSystemDrives(driveB2);
+            
         }
 
 
-        private void driveB2_DropDown(object sender, EventArgs e)
+        /*------GROUP 1------*/
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            func.getDrives(driveB2);
+            listBox2.Items.Clear();
+            func.getDriveInfo(driveB1, listBox1);
+        }
+        
+        private void driveB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            func.getDriveInfo(driveB1, listBox1);
         }
 
-        private void driveB1_DropDownClosed(object sender, EventArgs e)
+        private void driveB1_SelectedValueChanged(object sender, EventArgs e)
         {
-            driveB1.Items.Clear();
+
+            listBox1.Items.Clear();
         }
 
-        private void driveB2_DropDownClosed(object sender, EventArgs e)
+        /*------GROUP 1------*/
+
+
+        /*------GROUP 2------*/
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            driveB2.Items.Clear();
+            listBox2.Items.Clear();
+            func.getDriveInfo(driveB2, listBox2);
+
         }
+        
+        private void driveB2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            func.getDriveInfo(driveB2, listBox2);
+        }
+
+        private void driveB2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+        }
+
+        /*------GROUP 2------*/
     }
 }

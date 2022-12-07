@@ -10,16 +10,32 @@ namespace WindowsFormsApp1
 {
     class Functions
     {
-        public void getDrives(ComboBox obj)
+        //private OpenFileDialog openFileDialog1;
+
+        protected internal void getSystemDrives(ComboBox obj)
         {
             foreach(DriveInfo drive in DriveInfo.GetDrives())
             {
-                if (drive.IsReady)
+                obj.Items.Add(drive);
+            }
+        }
+
+        protected internal void getDriveInfo(ComboBox comboBox, ListBox list1)
+        {
+            try
+            {
+                DriveInfo drive = (DriveInfo)comboBox.SelectedItem;
+                foreach(DirectoryInfo dirInfo in drive.RootDirectory.GetDirectories())
                 {
-                    obj.Items.Add(drive);
-                    //obj.Text = Convert.ToString(drive);
+                    list1.Items.Add(dirInfo);
                 }
             }
+            catch(Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
