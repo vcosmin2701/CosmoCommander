@@ -64,16 +64,22 @@
             this.driveB1.FormattingEnabled = true;
             this.driveB1.Location = new System.Drawing.Point(146, 13);
             this.driveB1.Name = "driveB1";
-            this.driveB1.Size = new System.Drawing.Size(94, 24);
+            this.driveB1.Size = new System.Drawing.Size(116, 24);
             this.driveB1.TabIndex = 3;
+            this.driveB1.Text = "Select drive..";
+            this.driveB1.DropDown += new System.EventHandler(this.driveB1_DropDown);
+            this.driveB1.DropDownClosed += new System.EventHandler(this.driveB1_DropDownClosed);
             // 
             // driveB2
             // 
             this.driveB2.FormattingEnabled = true;
             this.driveB2.Location = new System.Drawing.Point(559, 12);
             this.driveB2.Name = "driveB2";
-            this.driveB2.Size = new System.Drawing.Size(94, 24);
+            this.driveB2.Size = new System.Drawing.Size(118, 24);
             this.driveB2.TabIndex = 4;
+            this.driveB2.Text = "Select drive..";
+            this.driveB2.DropDown += new System.EventHandler(this.driveB2_DropDown);
+            this.driveB2.DropDownClosed += new System.EventHandler(this.driveB2_DropDownClosed);
             // 
             // backBtn1
             // 
