@@ -49,6 +49,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(280, 532);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
             // listBox2
             // 
@@ -99,6 +100,7 @@
             this.forwardBtn1.TabIndex = 6;
             this.forwardBtn1.Text = ">>";
             this.forwardBtn1.UseVisualStyleBackColor = true;
+            this.forwardBtn1.Click += new System.EventHandler(this.forwardBtn1_Click);
             // 
             // backBtn2
             // 
@@ -120,27 +122,27 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(456, 191);
+            this.deleteBtn.Location = new System.Drawing.Point(446, 191);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(75, 50);
+            this.deleteBtn.Size = new System.Drawing.Size(90, 50);
             this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "DELETE";
             this.deleteBtn.UseVisualStyleBackColor = true;
             // 
             // copyBtn
             // 
-            this.copyBtn.Location = new System.Drawing.Point(456, 264);
+            this.copyBtn.Location = new System.Drawing.Point(446, 264);
             this.copyBtn.Name = "copyBtn";
-            this.copyBtn.Size = new System.Drawing.Size(75, 50);
+            this.copyBtn.Size = new System.Drawing.Size(90, 50);
             this.copyBtn.TabIndex = 10;
             this.copyBtn.Text = "COPY";
             this.copyBtn.UseVisualStyleBackColor = true;
             // 
             // moveBtn
             // 
-            this.moveBtn.Location = new System.Drawing.Point(456, 339);
+            this.moveBtn.Location = new System.Drawing.Point(446, 339);
             this.moveBtn.Name = "moveBtn";
-            this.moveBtn.Size = new System.Drawing.Size(75, 50);
+            this.moveBtn.Size = new System.Drawing.Size(90, 50);
             this.moveBtn.TabIndex = 11;
             this.moveBtn.Text = "MOVE";
             this.moveBtn.UseVisualStyleBackColor = true;

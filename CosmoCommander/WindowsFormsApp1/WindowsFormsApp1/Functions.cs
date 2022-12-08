@@ -37,5 +37,25 @@ namespace WindowsFormsApp1
             }
             
         }
+
+
+        protected internal void showFolderList(ListBox obj1, ListBox obj2)
+        {
+            try
+            {
+                DirectoryInfo dir = (DirectoryInfo)obj1.SelectedItem;
+                foreach (FileInfo files in dir.GetFiles())
+                {
+                    obj1.Items.Clear();
+                    obj2.Items.Add(files);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
+        }
     }
 }
