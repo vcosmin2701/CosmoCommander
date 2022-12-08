@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         {
             func.getSystemDrives(driveB1);
             func.getSystemDrives(driveB2);
-            
+
         }
 
 
@@ -32,13 +32,13 @@ namespace WindowsFormsApp1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
+            listBox1.Items.Clear();
             func.getDriveInfo(driveB1, listBox1);
         }
         
         private void driveB1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //listBox1.Items.Clear();
             func.getDriveInfo(driveB1, listBox1);
         }
 
@@ -46,6 +46,12 @@ namespace WindowsFormsApp1
         {
 
             listBox1.Items.Clear();
+        }
+
+        private void forwardBtn1_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            func.showFolderList(listBox1, listBox1);
         }
 
         /*------GROUP 1------*/
@@ -68,6 +74,11 @@ namespace WindowsFormsApp1
         private void driveB2_SelectedValueChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
+        }
+
+        private void listBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            func.showFolderList(listBox1, listBox1);
         }
 
         /*------GROUP 2------*/
